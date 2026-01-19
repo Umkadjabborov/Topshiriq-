@@ -5,7 +5,7 @@ export const createCategory = async (req, res) => {
     if (!name || name.trim().length === 0) {
       return res.status(400).json({ 
         success: false, 
-        message: "Kategoriya nomi bo‘sh bo‘lmasligi kerak" 
+        message: "Kategoriya nomi bosh bolmasligi kerak" 
       });
     }
 
@@ -18,7 +18,7 @@ export const createCategory = async (req, res) => {
 
     res.status(201).json({
       success: true,
-      message: "Yangi kategoriya muvaffaqiyatli qo‘shildi",
+      message: "Yangi kategoriya muvaffaqiyatli qoshildi",
       data: result.rows[0]
     });
   } catch (error) {
